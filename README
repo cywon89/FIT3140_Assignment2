@@ -1,0 +1,30 @@
+FIT3140 ASSIGNMENT 2
+Traffic Analyzer & Risk Analysis
+GROUP 10
+
+PINS
+LED: PIN8_13
+MOTION SENSOR: VCC: PIN9_4, OUT: PIN9_11, GND: PIN9_2
+
+LIRARIES & DEPENDENCIES USED:   Bonescript 
+                                Express
+                                Firebase-admin
+
+STEPS
+npm init
+
+npm install express --save
+npm install firebase
+npm install firebase-admin --save
+npm install -g firebase-tools
+
+node app.js 
+
+firebase login --no-localhost
+firebase init
+firebase serve
+
+FAULTS
+- might throw error unhandled 160.js: 
+solution: change localhost port
+

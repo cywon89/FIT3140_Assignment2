@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Traffic Analyzer</title>
+    <script>"./firebaseWebApi.js"</script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+     
+          
+
+    </script>
+</head>
+
+ <body>
+    <td>
+        <h3>MOTION ON/OFF</h3>
+        <input type="checkbox" onchange="MotionOnOff()" id="motionSwitch">
+    </td>
+
+     <script>
+        var db = firebase.database()
+        , ref = db.ref("motionSensorData")
+        , motionRef = db.ref("motionSensorData/motion")
+        , counterRef = db.ref("motionSensorData/motionCounter")
+        , timeRef = db.ref("motionSensorData/time");
+
+        var sensorRef = db.ref("Sensor");
+
+        function MotionOnOff(){
+            if (document.getElementById('motionSwitch').checked){
+                sensorRef.set({
+                    sensor: true
+                });
+            } else {
+                sensorRef.set({
+                    sensor: false
+                });
+            }
+        }
+    </script>
+ 
+
+   
+
+
+    
+</body>
+</html>
